@@ -7,18 +7,18 @@ function App() {
      const content =[
       {
         target:'news',
-        title:'item title 1',
-        text : 'item text 1'
+        title:'News title 1',
+        text : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu mauris vitae metus placerat porta in id '
       },
       {
         target:'divb',
-        title:'item title 2',
-        text : 'item text 2'
+        title:'divB title 2',
+        text : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu mauris vitae metus placerat porta in id '
       },
       {
         target:'about',
-        title:'item title 3',
-        text : 'item text 3'
+        title:'About title 3',
+        text : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu mauris vitae metus placerat porta in id '
       },
 
 

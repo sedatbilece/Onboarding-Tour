@@ -27,18 +27,27 @@ function Card({content ,func}) {
     function setPosisition(){
 
         let targetlist=   content.map( item => item.target);
-        const  targetItem = document.getElementsByClassName(targetlist[num])// dönen listedeki classlar 
-       
-        console.log(targetItem)// targetItem[0] ile propertyleri alıyoruz
+        
+        try{
+            const  targetItem = document.getElementsByClassName(targetlist[num])// dönen listedeki classlar 
+            console.log(targetItem)// targetItem[0] ile propertyleri alıyoruz
 
-        let pos = getPosition(targetItem,cardwith,cardheight);
+
+            let pos = getPosition(targetItem,cardwith,cardheight);
+            setLeft(pos[0]);
+            setTop(pos[1]);
+            console.log("pos:",pos)
+        }catch(e){
+            console.log("error:",e)
+        }
+       
+      
        
          console.log(window.innerWidth)
 
 
-        console.log("pos:",pos)
-        setLeft(pos[0]);
-        setTop(pos[1]);
+        
+       
 
     }
 
