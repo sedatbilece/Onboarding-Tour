@@ -32,30 +32,21 @@ function Card({content ,func}) {
             const  targetItem = document.getElementsByClassName(targetlist[num])// dönen listedeki classlar 
             console.log(targetItem)// targetItem[0] ile propertyleri alıyoruz
 
-
             let pos = getPosition(targetItem,cardwith,cardheight);
             setLeft(pos[0]);
             setTop(pos[1]);
+            
             console.log("pos:",pos)
         }catch(e){
             console.log("error:",e)
         }
-       
-      
-       
          console.log(window.innerWidth)
-
-
-        
-       
 
     }
 
     useEffect( () => {
         
         setPosisition();
-
-       
 
        },[])
 
@@ -68,16 +59,12 @@ function Card({content ,func}) {
             setX(1);
         }
     
-
         if(num>=content.length){
             
             console.log('component kaldırılmalıdır');
             func(1);// return visibility of card
-        }
-        
+        }      
 },[num]) 
-
-
 
 
     const style={
@@ -86,9 +73,6 @@ function Card({content ,func}) {
             top:top+'px',
             left:left+'px',
             zIndex: '1'
-            
-          
-
     }
 
 
@@ -126,9 +110,4 @@ function Card({content ,func}) {
 
 
 }
-
 export default Card;
-
-/* contente erişiliyor
- {content.map((item,index)=><div key={index}>{item.target}</div> )    }
-*/
