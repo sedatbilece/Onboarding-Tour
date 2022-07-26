@@ -6,12 +6,12 @@ function App() {
 
      const content =[
       {
-        target:'divb',
+        target:'news',
         title:'item title 1',
         text : 'item text 1'
       },
       {
-        target:'contact',
+        target:'divb',
         title:'item title 2',
         text : 'item text 2'
       },
