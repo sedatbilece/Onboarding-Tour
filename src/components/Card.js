@@ -25,14 +25,15 @@ function Card({content ,func}) {
 
 
     function setPosisition(){
-
+        
         let targetlist=   content.map( item => item.target);
         
         try{
+            
             const  targetItem = document.getElementsByClassName(targetlist[num])// dönen listedeki classlar 
             console.log(targetItem)// targetItem[0] ile propertyleri alıyoruz
-
-            let pos = getPosition(targetItem,cardwith,cardheight);
+           
+            let pos = getPosition(targetItem[0],cardwith,cardheight);
             setLeft(pos[0]);
             setTop(pos[1]);
             
@@ -99,7 +100,7 @@ function Card({content ,func}) {
           {num!==content.length ?<span> {num+1}of {content.length}</span> :null} 
         
          <div>
-         {x!=1?<a  className='notnow' onClick={()=>func(1)}>Not Now</a>:null}
+         {x!==1?<a  className='notnow' onClick={()=>func(1)}>Not Now</a>:null}
          <button className='btn' onClick={ ()=>setNum(num+1) } ><b>{buttext[x]}</b></button>
          </div>
           </div>
