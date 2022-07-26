@@ -1,43 +1,29 @@
-import { useEffect } from 'react';
+
 import '../App.css';
 import Card from './Card';
-
+import { useState } from 'react';
 
 
 function Target({content}){
  
-
-    useEffect( () => {
-        console.log("target yüklendi")
-       
-       },[])
-
     
+    //child da fonksiyona verilen veriyi burada alıyoruz.
+  const [vis, setVis] = useState(0);
+  const pull_data = (data) => {
 
-    useEffect( () => {
-        console.log("target render")
-       
-       })
+    setVis(data);
+  }
    
     return (<div>
 
-        <Card content={content}  />
+        
+        {console.log("app com render edildi")}
+        {console.log("vis:",vis) }
 
+        {!vis && <Card content={content} func={pull_data} />}
     </div>)
 }
 
 
 export default Target;
 
-/*
-
-{content.map((item,index)=>{
-            return (<div>
-                <h1>{item.title}</h1>
-                <p>{item.text}</p>
-                {item.target}
-
-            </div>)
-        })}
-
-*/

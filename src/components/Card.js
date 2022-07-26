@@ -3,13 +3,16 @@ import './Card.css';
 import { useEffect ,useState } from 'react';
 import {getPosition} from './getPosition';
 
-function Card({content }) {
+function Card({content ,func}) {
      
-   let  cardwith=200;
-   let cardheight=200;
+   let  cardwith=560;
+   let cardheight=340;
    
     const [left , setLeft] = useState(0);
     const [top , setTop] = useState(0);
+    const [num, setNum] = useState(0);
+    const [x, setX] = useState(0);
+    const buttext=["Next","Finish it"];
 
 // SORUNLU OLABİLİR
     const myHandlerFunction = () => {
@@ -24,7 +27,7 @@ function Card({content }) {
     function setPosisition(){
 
         let targetlist=   content.map( item => item.target);
-        const  targetItem = document.getElementsByClassName(targetlist[1])// dönen listedeki classlar 
+        const  targetItem = document.getElementsByClassName(targetlist[num])// dönen listedeki classlar 
        
         console.log(targetItem)// targetItem[0] ile propertyleri alıyoruz
 
@@ -47,15 +50,30 @@ function Card({content }) {
 
        },[])
 
+       useEffect(()=>{
+        setPosisition();
+        console.log("num:",num);
+
+        if(num>=content.length-1){
+            
+            setX(1);
+        }
+    
+
+        if(num>=content.length){
+            
+            console.log('component kaldırılmalıdır');
+            func(1);// return visibility of card
+        }
+        
+},[num]) 
+
 
 
 
     const style={
        
             position:'fixed',
-            background: 'red',
-            width: cardwith+'px',
-            height: '10%',
             top:top+'px',
             left:left+'px',
             zIndex: '1'
@@ -65,12 +83,37 @@ function Card({content }) {
     }
 
 
-return (<div style={style}>
-          
-          <p>Card item</p>
-          {left} - {top}
-         
-</div>)
+    return (<div style={style}>
+        <div className="Card">
+  
+  <div className='Pic'>Picture</div>
+        
+
+        <div className='CardText'>
+
+        <div className='title'>
+            <h4>{content.map((item,index)=> index===num ?<div  key={index}>{item.title}</div> : null)}</h4>
+            
+        </div>
+        {
+            content.map((item,index)=> index===num ?<div  key={index}>{item.text}</div> : null)
+                
+        }
+        </div>
+
+
+          <div className='bottom'>
+          {num!==content.length ?<span> {num+1}of {content.length}</span> :null} 
+        
+         <div>
+         <a  className='notnow' onClick={()=>func(1)}>Not Now</a>
+         <button className='btn' onClick={ ()=>setNum(num+1) } ><b>{buttext[x]}</b></button>
+         </div>
+          </div>
+
+             
+    </div>
+    </div>)
 
 
 }

@@ -24,11 +24,7 @@ let list =[]
        }
 
      }
-     
-    
-    
-    
-
+       
 return list;// left , top   
 }
 
