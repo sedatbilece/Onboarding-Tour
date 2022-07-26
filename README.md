@@ -1,6 +1,19 @@
-# Getting Started with Create React App
+# Onboarding Tour Library
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was developed with inspiration from similar projects in the link below
+
+
+## Usage
+
+<img width="845" alt="Ekran görüntüsü 2022-07-26 164806" src="https://user-images.githubusercontent.com/63735861/181022463-c9552a44-7fff-4fc5-a050-721c150ee9ce.png">
+
+## Sample
+
+
+![onboardCard](https://user-images.githubusercontent.com/63735861/181022557-688cf74a-02d2-42ad-9b05-bee0018bfc1b.gif)
+
+
+
 
 ## Available Scripts
 
