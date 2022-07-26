@@ -99,7 +99,7 @@ function Card({content ,func}) {
           {num!==content.length ?<span> {num+1}of {content.length}</span> :null} 
         
          <div>
-         <a  className='notnow' onClick={()=>func(1)}>Not Now</a>
+         {x!=1?<a  className='notnow' onClick={()=>func(1)}>Not Now</a>:null}
          <button className='btn' onClick={ ()=>setNum(num+1) } ><b>{buttext[x]}</b></button>
          </div>
           </div>
