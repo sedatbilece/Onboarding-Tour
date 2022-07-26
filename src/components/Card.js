@@ -1,7 +1,7 @@
 
-import './Card.css';
+import '../styles/Card.css';
 import { useEffect ,useState } from 'react';
-import {getPosition} from './getPosition';
+import {getPosition} from '../functions/getPosition';
 
 function Card({content ,func}) {
      
