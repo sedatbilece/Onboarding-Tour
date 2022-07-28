@@ -1,26 +1,41 @@
 
 import '../styles/App.css';
 import Card from './Card';
-import { useState } from 'react';
+import Trigger from './Trigger';
+import Welcome from './Welcome';
+import { useEffect, useState } from 'react';
 
 
 function Target({content}){
  
-    
-    //child da fonksiyona verilen veriyi burada alıyoruz.
-  const [vis, setVis] = useState(0);
-  const pull_data = (data) => {
 
-    setVis(data);
-  }
-   
+useEffect( () => {
+  console.log("target render")
+})
+
+
+    const [step, setStep] = useState(0);
+    const [show, setShow] = useState(0);
+  
     return (<div>
 
-        
-        {console.log("app com render edildi")}
-        {console.log("vis:",vis) }
+         {show===0?<Welcome setShow={setShow} setStep={setStep}/>:null}
 
-        {!vis && <Card content={content} func={pull_data} />}
+        {content.map( (item,index) => {
+          if(index===step && show===1){
+            if(item.type==='card'){
+              return (<Card key={index} content={item} setStep={setStep} step={step}/>)
+            }
+            else{
+              return (<Trigger key={index} content={item} setStep={setStep} step={step}/>)
+            }
+            
+          }
+          else{
+            return '';
+          }
+        })}
+       
     </div>)
 }
 
