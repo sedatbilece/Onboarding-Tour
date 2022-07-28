@@ -46,18 +46,11 @@
   height: 50px;
   border-radius: 10px;
   color: white;
+  cursor: pointer;
+  
 }
 .btn:active{
   background-color: #8ec72b;
   transform: scale(0.95);
-  transition: ease-in-out 0.5s;
-}
-.notnow{
-  margin-right: 10px;
-  color: #0087E0;
-  text-decoration: underline;
-  cursor: pointer;
-}
-.notnow:active{
-  color:black;
+  transition: ease-in-out 0.2s;
 }

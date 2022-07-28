@@ -1,0 +1,10 @@
+.clickable{
+    
+    animation: shadow 3s infinite;
+    background-color: rgba(255, 182, 41, 1) !important;
+}
+
+@keyframes shadow {
+    30% {box-shadow: 0px 0px 5px 5px rgba(234, 172, 49, 0.5);}
+    
+  }

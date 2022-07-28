@@ -1,22 +1,38 @@
 
-import './styles/App.css';
-import Target from './components/Target';
+import '../styles/App.css';
+import Target from '../components/Target';
 function App() {
 
 
      const content =[
       {
         target:'news',
+        type:'card',
         title:'News title 1',
         text : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu mauris vitae metus placerat porta in id '
       },
       {
+        target:'contact',
+        type:'trigger',
+      },
+      {
         target:'divb',
+        type:'trigger',
+      },
+      
+      {
+        target:'divb',
+        type:'card',
         title:'divB title 2',
         text : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu mauris vitae metus placerat porta in id '
       },
       {
         target:'about',
+        type:'trigger',
+      },
+      {
+        target:'about',
+        type:'card',
         title:'About title 3',
         text : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu mauris vitae metus placerat porta in id '
       },
@@ -44,8 +60,8 @@ function App() {
   <h3>Resize the browser window to see the effect.</h3>
 
    <div className='flexable'>
-      <div className='diva'>a</div>
-      <div className='divb'>b</div>
+      <div className='diva cube'>a</div>
+      <div className='divb cube'>b</div>
 
    </div>
 </div>

@@ -44,6 +44,10 @@ div.content {
   padding: 1px 16px;
   height: 1000px;
 }
+.cube{
+  padding: 20px;
+  background-color: cadetblue;
+}
 
 @media screen and (max-width: 700px) {
   .sidebar {
