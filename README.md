@@ -1,24 +1,24 @@
 # Onboarding Tour Library
-<hr>
+
 This project was developed with inspiration from similar projects in the link below
 <p>https://snyk.io/advisor/categories/javascript/frontend-and-client-side/modals-and-toasters/onboarding-tour</p>
 
 ### Description
-<hr>
+
 Steps and card structure were dynamically created with the target classes, title and content information imported from outside. The card can appear on the left, right or below depending on the status of the target class.
 
 ## Usage
-<hr>
+
 <p>
 <img  alt="Usage in your code" src="./docs/ss.png">
 </p>
 
 ## Sample
-<hr>
+
 <img  alt="Sample using " src="./docs/sample.gif">
 
 ## Screenshots
-<hr>
+
 <p float='left'> 
 <img  alt="ss " src="./docs/ss1.png" width='30%'>
 <img  alt="ss " src="./docs/ss2.png" width='30%'>
