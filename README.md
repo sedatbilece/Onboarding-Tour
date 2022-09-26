@@ -7,7 +7,7 @@ This project was developed with inspiration from similar projects in the link be
 
 Steps and card structure were dynamically created with the target classes, title and content information imported from outside. The card can appear on the left, right or below depending on the status of the target class.
 
-## Usage
+## Usage Structure
 
 <p>
 <img  alt="Usage in your code" src="./docs/ss.png">
